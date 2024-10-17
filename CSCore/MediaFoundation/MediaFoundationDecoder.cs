@@ -225,6 +225,32 @@ namespace CSCore.MediaFoundation
         }
 
         /// <summary>
+        ///     Gets the decoder buffer offset.
+        /// </summary>
+        public int DecoderBufferOffset
+        {
+            get
+            {
+                if (_disposed)
+                    return 0;
+                return _decoderBufferOffset;
+            }
+        }
+
+        /// <summary>
+        ///     Gets the decoder buffer count.
+        /// </summary>
+        public int DecoderBufferCount
+        {
+            get
+            {
+                if (_disposed)
+                    return 0;
+                return _decoderBufferCount;
+            }
+        }
+
+        /// <summary>
         ///     Gets a value which indicates whether the seeking is supported. True means that seeking is supported. False means
         ///     that seeking is not supported.
         /// </summary>
